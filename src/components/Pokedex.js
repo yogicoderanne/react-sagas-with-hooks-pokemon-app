@@ -1,11 +1,13 @@
 import React from 'react';
 import PokeCard from './PokeCard';
-
+import './Pokedex.css';
+import './PokeCard.css';
 function Pokedex(props) {
 	console.log(props.pokemon);
 	return (
 		<div className='Pokedex'>
 			<h1>Pokedex</h1>
+			<div className='Pokedex-cards' />
 			{props.pokemon.map((p) => <PokeCard id={p.id} name={p.name} type={p.type} exp={p.base_exp} />)}
 		</div>
 	);
